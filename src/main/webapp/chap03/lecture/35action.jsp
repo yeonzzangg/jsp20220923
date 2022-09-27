@@ -27,8 +27,9 @@
 	http://localhost:8080/jsp20220923/39action.jsp
 	(40번)
 	http://localhost:8080/jsp20220923/chap03/book/40action.jsp
-	 --%>
-	<%-- /로 시작하지 않으면 상대경로 --%>
+
+	/ 로 시작하지 않으면 상대경로 
+	--%>
 	
 	<!-- <form action="36action.jsp"> -->
 	<!-- <form action="sub1/37action.jsp"> -->
