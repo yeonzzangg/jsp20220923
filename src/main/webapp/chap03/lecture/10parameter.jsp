@@ -10,7 +10,7 @@
 	<h1>파라미터</h1>
 	<p>
 		q 파라미터 :
-		<%= request.getParameter("q")%></p>
+		<%= request.getParameter("q")%></p> <!-- 스트링만 리턴! 다른타입 필요하면 변환해서 써야됨 -->
 	<%
 	String q = request.getParameter("q");
 
