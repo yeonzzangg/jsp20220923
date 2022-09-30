@@ -10,6 +10,7 @@
 <body>
 	<%
 	String nameParam = request.getParameter("name");
+	
 	if (nameParam != null && !nameParam.trim().isEmpty()) {
 		session.setAttribute("userName", nameParam);
 	}
