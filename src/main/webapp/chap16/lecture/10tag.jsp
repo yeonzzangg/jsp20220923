@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags/chap16"%>
 <% request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
 <html>
@@ -11,34 +13,32 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-<%
-request.setAttribute("bookList", new String[] {"스프링", "자바", "sql"});
-%>
-
-<%-- bookList attribute의 3개 아이템을 ul내의 li로 출력 --%>
-<div class="container">
-	<div class="row">
-		<div class="col-3">
-		
-			<ul class="list-group">
-				<c:forEach items="${bookList }" var="book">
-					<li class="list-group-item">${book }</li>
-				</c:forEach>
-			</ul>
-			
-		</div>
-	</div>
-</div>
-
+	<my:tag11 
+		menuItems="Home,About,Product,Cart,Member" 
+		current="About" 
+		Home="/abc/home"
+		About="/abcde/About"
+		Product="/product"
+		Cart="/cart"
+		Member="/def/member"
+		/>
+	<hr>
+	<my:tag11 
+		menuItems="Overview,Module,Package,Class" 
+		current="Class"
+		Overview="/overview"
+		Module="/def/module"
+		Package="/aaa/package"
+		Class="/bbb/class"
+		/>
+	<%-- 메뉴 이름 Overview,Module,Package,Class은
+	고정된 값이 아니라 바뀔 수 있으므로
+	dynamic-attributes 사용하는 거임 ! --%>
+	
+	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 

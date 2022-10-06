@@ -14,16 +14,10 @@
 </head>
 <body>
 
-<my:tag4></my:tag4>
+	<my:tag10 left="1" right="5"></my:tag10>
+	<hr>
+	<my:tag10 left="11" right="20" active="15"></my:tag10>
 
-<hr>
-
-<my:tag5></my:tag5>
-
-<hr>
-
-<my:tag5 att="value1"></my:tag5>
-<my:tag5 btt="value2"></my:tag5>
 
 
 

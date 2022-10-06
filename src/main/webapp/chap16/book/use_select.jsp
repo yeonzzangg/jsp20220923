@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" tagdir="/WEB-INF/tags/chap16" %>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags/chap16"%>
 <% request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
 <html>
@@ -14,17 +14,8 @@
 </head>
 <body>
 
-<my:tag4></my:tag4>
-
-<hr>
-
-<my:tag5></my:tag5>
-
-<hr>
-
-<my:tag5 att="value1"></my:tag5>
-<my:tag5 btt="value2"></my:tag5>
-
+<tf:select name="code" rgb="rgb모드" wb="흑백모드" />
+<tf:select name="genre" rock="락" ballad="발라드" metal="메탈" />
 
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

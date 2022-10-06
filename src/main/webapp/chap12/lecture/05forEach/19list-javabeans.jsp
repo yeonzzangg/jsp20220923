@@ -15,6 +15,7 @@
 	<%-- Car 타입의 아이템을 갖는 List를 attribute에 넣고 --%>
 	<%
 	List<Car> list = new ArrayList<>();
+	
 	Car car1 = new Car();
 	car1.setModel("tesla");
 	car1.setPrice(500);
@@ -31,6 +32,7 @@
 	
 	pageContext.setAttribute("cars", list);
 	%>
+	
 	
 	
 	<%-- forEach로 탐색 --%>
