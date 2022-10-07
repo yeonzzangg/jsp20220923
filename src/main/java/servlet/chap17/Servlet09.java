@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jsp20220923.chap07.Book;
-
 /**
- * Servlet implementation class Servlet04
+ * Servlet implementation class Servlet09
  */
-@WebServlet("/Servlet04")
-public class Servlet04 extends HttpServlet {
+@WebServlet("/Servlet09")
+public class Servlet09 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Servlet04() {
+    public Servlet09() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,23 +26,22 @@ public class Servlet04 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// database 관련 일을 열심히 함
-		Book book = new Book("java", 500);
+		String path = "/WEB-INF/view/chap17/view05.jsp";
+		request.getRequestDispatcher(path).forward(request, response);
 		
-		// 일한 결과를 객체에 담아서(request에 추가)
-		request.setAttribute("searchResult", book);
-		
-		// jsp로 forward(request를 jsp에게 포워드)
-		String jspPath = "/WEB-INF/view/chap17/view03.jsp"; 
-		request.getRequestDispatcher(jspPath).forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		System.out.println("포스트방식으로 요청와서 메소드 일함 !");
+		
+		String name = request.getParameter("name");
+		String ad = request.getParameter("address");
+		
+		System.out.println("이름 : " + name);
+		System.out.println("주소 : " + ad);
 	}
 
 }
