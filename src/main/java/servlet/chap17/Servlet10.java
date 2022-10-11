@@ -16,7 +16,7 @@ import jsp20220923.chap07.Book;
 /**
  * Servlet implementation class Servlet10
  */
-@WebServlet("/Servlet10")
+@WebServlet(value = {"/Servlet10", "/filter/servlet10"})
 public class Servlet10 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -62,7 +62,8 @@ public class Servlet10 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
+		// 0. 일하기 전 사전작업
+//		request.setCharacterEncoding("utf-8"); 필터로!
 		// 1. 일하고
 		
 		// 1-1. 리퀘스트 파라미터 꺼내고
