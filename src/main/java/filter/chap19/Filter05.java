@@ -13,12 +13,12 @@ import javax.servlet.annotation.WebFilter;
  * Servlet Filter implementation class filter05
  */
 //@WebFilter("/filter05")
-public class filter05 implements Filter {
+public class Filter05 implements Filter {
 
     /**
      * Default constructor. 
      */
-    public filter05() {
+    public Filter05() {
         // TODO Auto-generated constructor stub
     }
 
