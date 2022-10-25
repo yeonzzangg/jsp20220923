@@ -58,7 +58,7 @@ public class Servlet15 extends HttpServlet {
 			// 4. 조회결과 attribute로 추가
 			List<String> list = new ArrayList<>();
 			/*
-			 * list.add(row1.getString(1)); 
+			 * list.add(row1.getString(1)); 첫번째 칼럼
 			 * list.add(row2.getString(1)); 
 			 * . .
 			 * list.add(row91.getString(1));
